@@ -6,8 +6,8 @@
 
 有两个操作
 
-* 扩张 
-* 平移 ---&gt; 整个区间平移
+* 扩张 (right动,left不动)
+* 平移 或者 **缩减**---&gt; （right动，left动）
 
 ### 模板
 
@@ -18,9 +18,11 @@ int sum = 0;
 while(right<n){
     //判断是否平移
     if(){
-        //平移附带的东西
-        //平移
-        left++;
+        curWin = right-left;
+        if(curWin>maxWin)
+            maxWin = curWin;
+        while(符合平移或者缩减条件)
+            left++;
     }
     //如果上述条件没平移就相当于扩张
     right++
